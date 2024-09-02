@@ -1,0 +1,88 @@
+{
+  "name": "nextjs-admin-boilerplate",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "local": "env-cmd -f .env.localhost.target node server.js",
+    "build:local": "env-cmd -f .env.localhost.target next build",
+    "start:local": "env-cmd -f .env.localhost.target next start",
+    "build": "next build",
+    "start": "next start",
+    "prepare": "husky",
+    "pre-push": "kill-port 443 && next build"
+  },
+  "dependencies": {
+    "@emotion/cache": "^11.13.1",
+    "@emotion/react": "^11.13.0",
+    "@emotion/styled": "^11.13.0",
+    "@formatjs/intl-localematcher": "^0.5.4",
+    "@mui/base": "^5.0.0-beta.40",
+    "@mui/material": "^5.16.4",
+    "@mui/material-nextjs": "^5.16.6",
+    "@mui/x-data-grid-generator": "^7.11.0",
+    "@mui/x-data-grid-pro": "^7.11.0",
+    "@tanstack/react-query": "^5.40.0",
+    "@tanstack/react-query-devtools": "^5.40.0",
+    "@types/negotiator": "^0.6.3",
+    "cookies-next": "^4.2.1",
+    "env-cmd": "^10.1.0",
+    "es-toolkit": "^1.16.0",
+    "framer-motion": "^11.3.19",
+    "ky": "^1.7.1",
+    "material-ui-popup-state": "^5.1.2",
+    "mui-datatables": "^4.3.0",
+    "negotiator": "^0.6.3",
+    "next": "14.2.5",
+    "next-auth": "^4.24.7",
+    "next-intl": "^3.17.2",
+    "postcss-import": "^15.1.0",
+    "postcss-loader": "^7.3.3",
+    "postcss-preset-env": "^9.3.0",
+    "react": "^18",
+    "react-dom": "^18",
+    "react-dropzone": "^14.2.3",
+    "react-grid-layout": "^1.4.4",
+    "react-hook-form": "^7.52.1",
+    "simple-zustand-devtools": "^1.1.0",
+    "xlsx": "^0.18.5",
+    "zustand": "^4.5.4"
+  },
+  "devDependencies": {
+    "@savvywombat/tailwindcss-grid-areas": "^4.0.0",
+    "@tanstack/eslint-plugin-query": "^5.35.6",
+    "@types/mui-datatables": "^4.3.12",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-beautiful-dnd": "^13.1.8",
+    "@types/react-dom": "^18",
+    "@typescript-eslint/eslint-plugin": "^7.16.1",
+    "@typescript-eslint/parser": "^7.16.1",
+    "eslint": "^8",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-airbnb-typescript": "^18.0.0",
+    "eslint-config-next": "^14.2.5",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-prettier": "^5.2.1",
+    "husky": "^9.1.1",
+    "kill-port": "^2.0.1",
+    "lint-staged": "^15.2.7",
+    "msw": "2.3.4",
+    "postcss": "^8",
+    "prettier": "^3.3.3",
+    "prettier-plugin-tailwindcss": "^0.6.6",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5"
+  },
+  "lint-staged": {
+    "*.{js|ts|jsx|tsx}": [
+      "eslint --cache --fix",
+      "prettier --write"
+    ]
+  },
+  "msw": {
+    "workerDirectory": [
+      "public"
+    ]
+  }
+}
