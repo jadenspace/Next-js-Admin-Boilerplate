@@ -1,10 +1,11 @@
 # Next.js 14+, Tailwind CSS 3.4+, MSW 2.4, Typescript 등과 Admin 작업을 위한 보일러 플레이트.
 
----
+
 ## 특징
 기존의 보일러 플레이트는 무겁습니다.
 
 실제 Admin 을 빠르게 구현하고자 할 때 필요한 필수 기능만을 포함하고 있습니다.
+
 
 ## 기능
 
@@ -32,6 +33,9 @@ i18n 라이브러리를 활용하여 다국어를 지원합니다.
 
 SSR 지원을 위해 instrumentationHook 을 활용하여 서버에서도 동작하도록 설정합니다.
 
+### tanstack-query (v5)
+[tanstack-query 라이브러리](https://tanstack.com/query/latest)를 활용하여 비동기 상태관리를 진행합니다.
+
 ### fetch 라이브러리 활용
 
 [ky 라이브러리](https://github.com/sindresorhus/ky)를 활용하여 fetch 를 진행합니다.
@@ -52,6 +56,7 @@ mui-datatables 에서 export / import / image uploader 를 쉽게 할 수 있도
 
 더 상세한 테이블 구현을 위한다면 [@mui/x-data-grid-pro](https://mui.com/x/api/data-grid/data-grid-pro/) 를 활용합니다. (라이센스 필요)
 
+
 ## 시작하기
 
 ### 요구 사항
@@ -60,7 +65,7 @@ mui-datatables 에서 export / import / image uploader 를 쉽게 할 수 있도
 
 ### 설치
 ```bash
-git clone https://github.com/jadenspace/nextjs-admin-boilerplate.git
+git clone https://github.com/jadenspace/Next-js-Admin-Boilerplate.git
 cd nextjs-admin-boilerplate
 npm install
 ```
@@ -73,14 +78,9 @@ npm install
 이후 `npm run local` 명령어를 통해 `server.js` 를 통한 https 서버를 구동합니다.
 
 
-### 작업하기 전에
+### FAQ
 
-- env 설정을 먼저 수정해주세요
-
-  로컬환경 URL 임시값을 그대로 쓸 경우 `vi /etc/hosts` 에 추가
-
-
-- 로컬환경에서 Next-auth 가 작동 안하는 경우
+- 로컬환경에서 next-auth 가 작동 안하는 경우
 
   - .env `NEXT_PUBLIC_NEXTAUTH_URL` 확인
   - https 서버 재구동 (pem 발급 당시와 다른 경우 문제 발생 가능)
